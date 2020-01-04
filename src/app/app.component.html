@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" [class]="theme">
+<div fxLayout="row wrap" [class]="selectedTheme">
     <mat-toolbar fxFlex="100" fxLayout="row" color="accent" class="fixed-toolbar">
         <!-- left aligned items -->
         <div fxFlex="70">
@@ -13,14 +13,8 @@
                 <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="changeTheme('pink')">
-                    <span>Pink Theme</span>
-                </button>
-                <button mat-menu-item (click)="changeTheme('blue')">
-                    <span>Blue Theme</span>
-                </button>
-                <button mat-menu-item (click)="changeTheme('candi')">
-                    <span>Candi Theme</span>
+                <button *ngFor="let theme of themes;" mat-menu-item (click)="changeTheme(theme)">
+                    <span>{{theme}}</span>
                 </button>
             </mat-menu>
         </div>
@@ -45,7 +39,7 @@
                 <mat-form-field appearance="outline">                            
                     <mat-label>Themes</mat-label>
                     <mat-select placeholder="Select Theme">
-                        <mat-option *ngFor="let t of available_themes" value="{{t}}">{{t}}</mat-option>
+                        <mat-option *ngFor="let t of materialDefaultThemes" value="{{t}}">{{t}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>

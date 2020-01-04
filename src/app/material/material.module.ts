@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import { OverlayModule} from '@angular/cdk/overlay';
+
 import { 
         MatButtonModule, MatSliderModule, MatProgressBarModule, 
         MatProgressSpinnerModule, MatToolbarModule, MatMenuModule,
@@ -14,6 +16,7 @@ import {
   imports: [
     CommonModule,
     FlexLayoutModule,
+    OverlayModule,
 
     MatButtonModule,
     MatSliderModule,
@@ -22,11 +25,12 @@ import {
     MatMenuModule,
     MatIconModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
   ],
   exports: [
     FlexLayoutModule,
-
+    OverlayModule,
+    
     MatButtonModule,
     MatSliderModule, 
     MatProgressBarModule,
