@@ -3,6 +3,7 @@
 
 @import "./themes/blue-theme.scss";
 @import "./themes/pink-theme.scss";
+@import "./themes/candi-theme.scss";
 
 .blue-theme {
     @include angular-material-theme($custom-theme);
@@ -10,6 +11,10 @@
 
 .pink-theme {
     @include angular-material-theme($custom-theme2);
+}
+
+.candi-theme {
+    @include angular-material-theme($candy-app-theme);
 }
 
 

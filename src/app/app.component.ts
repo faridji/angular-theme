@@ -23,6 +23,10 @@ export class AppComponent {
     {
       this.theme = "pink-theme";
     }
+    else if (theme === "candi")
+    {
+      this.theme = "candi-theme";
+    }
     else 
     {
       this.theme = "blue-theme"

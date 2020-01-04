@@ -1,8 +1,8 @@
 <div fxLayout="row wrap" [class]="theme">
-    <mat-toolbar fxFlex="100" fxLayout="row" color="primary" class="fixed-toolbar">
+    <mat-toolbar fxFlex="100" fxLayout="row" color="accent" class="fixed-toolbar">
         <!-- left aligned items -->
         <div fxFlex="70">
-            Home
+            Custom Theme
         </div>
     
         <!-- right aligned items -->
@@ -14,12 +14,13 @@
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="changeTheme('pink')">
-                    <mat-icon>dialpad</mat-icon>
                     <span>Pink Theme</span>
                 </button>
                 <button mat-menu-item (click)="changeTheme('blue')">
-                    <mat-icon>voicemail</mat-icon>
                     <span>Blue Theme</span>
+                </button>
+                <button mat-menu-item (click)="changeTheme('candi')">
+                    <span>Candi Theme</span>
                 </button>
             </mat-menu>
         </div>
