@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular Material Theming';
   theme: string;
+  available_themes: any[] = ['Pink', 'indigo'];
 
-  constructor()
+  constructor(private overlayContainer: OverlayContainer)
   {
     this.theme = "pink-theme";
+    this.overlayContainer.getContainerElement().classList.add(this.theme);
   }
 
   changeTheme(theme: string)
@@ -24,5 +27,12 @@ export class AppComponent {
     {
       this.theme = "blue-theme"
     }
+
+    // Certain components such as menu, select, dialog etc are are inside of a global 
+    // overlay container, an additional step is required for those components to be 
+    // affected by the theme's css class selector
+    this.overlayContainer.getContainerElement().classList.add(this.theme);
   }
+
+
 }
