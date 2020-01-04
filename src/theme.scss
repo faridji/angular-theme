@@ -1,10 +1,25 @@
 @import "~@angular/material/_theming";
-
 @include mat-core();
 
 $app-primary: mat-palette($mat-blue, 600);
 $app-accent: mat-palette($mat-yellow, 700);
 $app-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
-$mat-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
-@include angular-material-theme($mat-theme);
+
+$app2-primary: mat-palette($mat-deep-purple, 600);
+$app2-accent: mat-palette($mat-pink, 100);
+$app2-warn: mat-palette($mat-red);
+$custom-theme2: mat-dark-theme($app2-primary, $app2-accent, $app2-warn);
+
+.blue-theme {
+    @include angular-material-theme($custom-theme);
+}
+
+.pink-theme {
+    @include angular-material-theme($custom-theme2);
+}
+
+
+
+
