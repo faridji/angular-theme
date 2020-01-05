@@ -3,3 +3,8 @@ $app2-accent: mat-palette($mat-pink, 100);
 $app2-warn: mat-palette($mat-red);
 
 $custom-theme2: mat-dark-theme($app2-primary, $app2-accent, $app2-warn);
+
+$app2-typography: mat-typography-config(
+    $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
+    $headline: mat-typography-level(24px, 32px, 400)
+);

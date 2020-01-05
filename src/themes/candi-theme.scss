@@ -5,3 +5,8 @@ $candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
 
 // Include the default theme styles.
 @include angular-material-theme($candy-app-theme);
+
+$candy-app-typography: mat-typography-config(
+    $font-family: 'Caveat, cursive, "Helvetica Neue", sans-serif',
+    $headline: mat-typography-level(24px, 32px, 400)
+);

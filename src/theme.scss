@@ -5,14 +5,9 @@
 @import "./themes/pink-theme.scss";
 @import "./themes/candi-theme.scss";
 
-// Custom typography
-$custom-typography: mat-typography-config(
-    $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
-    $headline: mat-typography-level(24px, 32px, 400)
-);
-@include angular-material-typography($custom-typography); 
 
 .blue-theme {
+    @include angular-material-typography($app2-typography); 
     @include angular-material-theme($custom-theme);
 }
 
@@ -21,6 +16,7 @@ $custom-typography: mat-typography-config(
 }
 
 .candi-theme {
+    @include angular-material-typography($candy-app-typography); 
     @include angular-material-theme($candy-app-theme);
 }
 
