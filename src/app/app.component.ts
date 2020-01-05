@@ -8,10 +8,10 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'Angular Material Theming';
+  title = "Angular Material Theming";
   selectedTheme: string = "pink-theme";
   themes: any[] = ["pink-theme", "candi-theme", "blue-theme"];
-  materialDefaultThemes: any[] = ['Pink', 'indigo'];
+  materialDefaultThemes: any[] = ["deeppurple-amber", "indigo-pink", "pink-bluegrey", "purple-green"];
 
   constructor(private overlayContainer: OverlayContainer)
   {
