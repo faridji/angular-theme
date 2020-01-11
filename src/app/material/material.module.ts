@@ -7,7 +7,7 @@ import { OverlayModule} from '@angular/cdk/overlay';
 import { 
         MatButtonModule, MatSliderModule, MatProgressBarModule, 
         MatProgressSpinnerModule, MatToolbarModule, MatMenuModule,
-        MatIconModule, MatSelectModule,MatCardModule
+        MatIconModule, MatSelectModule,MatCardModule, MatTableModule
       } from '@angular/material';
 
 
@@ -26,6 +26,7 @@ import {
     MatIconModule,
     MatSelectModule,
     MatCardModule,
+    MatTableModule
   ],
   exports: [
     FlexLayoutModule,
@@ -39,7 +40,8 @@ import {
     MatMenuModule,
     MatIconModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,60 @@
+<div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start" class="content">
+
+    <div fxFlex="49">
+
+        <!-- Typography -->
+        <h1>{{title}}</h1>
+        <div style="margin-bottom: 20px;">Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Animi veritatis numquam nobis totam repudiandae saepe
+            perspiciatis odit,eum nemo eos asperiores, minima quae 
+            dolore nihil quaerat? Aperiam rem dolores voluptatum.
+        </div>
+
+        <!-- Buttons -->
+        <div fxLayoutGap="10px">
+            <button mat-raised-button color="primary">
+                Primary button
+            </button>
+            <button mat-raised-button color="accent">
+                Accent button
+            </button>
+            <button mat-raised-button color="warn">
+                Warn button
+            </button>
+
+            <mat-form-field appearance="outline">                            
+                <mat-label>Themes</mat-label>
+                <mat-select placeholder="Select Theme">
+                    <mat-option *ngFor="let t of materialDefaultThemes" value="{{t}}">{{t}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        
+        <!-- Other Controls -->
+        <mat-slider min="1" max="100" step="1" value="30"></mat-slider>
+        <mat-progress-bar mode="determinate" value="70" color="accent"></mat-progress-bar>
+        <mat-spinner color="accent"></mat-spinner>
+    </div>
+    
+    <div fxFlex="49">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shiba Inu</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="accent">LIKE</button>
+              <button mat-raised-button color="accent">SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
