@@ -7,7 +7,8 @@ import { OverlayModule} from '@angular/cdk/overlay';
 import { 
         MatButtonModule, MatSliderModule, MatProgressBarModule, 
         MatProgressSpinnerModule, MatToolbarModule, MatMenuModule,
-        MatIconModule, MatSelectModule,MatCardModule, MatTableModule
+        MatIconModule, MatSelectModule,MatCardModule, MatTableModule, 
+        MatInputModule, MatListModule
       } from '@angular/material';
 
 
@@ -19,6 +20,7 @@ import {
     OverlayModule,
 
     MatButtonModule,
+    MatInputModule,
     MatSliderModule,
     MatProgressBarModule,
     MatToolbarModule,
@@ -26,13 +28,15 @@ import {
     MatIconModule,
     MatSelectModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule
   ],
   exports: [
     FlexLayoutModule,
     OverlayModule,
     
     MatButtonModule,
+    MatInputModule,
     MatSliderModule, 
     MatProgressBarModule,
     MatProgressSpinnerModule,
@@ -41,7 +45,8 @@ import {
     MatIconModule,
     MatSelectModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }

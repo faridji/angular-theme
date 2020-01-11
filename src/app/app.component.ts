@@ -11,7 +11,6 @@ export class AppComponent implements OnInit{
   title = "Angular Material Theming";
   selectedTheme: string = "pink-theme";
   themes: any[] = ["pink-theme", "candi-theme", "blue-theme"];
-  materialDefaultThemes: any[] = ["deeppurple-amber", "indigo-pink", "pink-bluegrey", "purple-green"];
 
   constructor(private overlayContainer: OverlayContainer)
   {

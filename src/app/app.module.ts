@@ -8,11 +8,14 @@ import { GeneralTableComponent } from './components/general-table/general-table.
 import { HomeComponent } from './components/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ChangeDetectionStrategyComponent } from './components/change-detection-strategy/component';
+import { ChildAppComponent } from './components/change-detection-strategy/child-app/child-app.component';
 
 let routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'table', component: GeneralTableComponent},
+  { path: 'changeDetectionStrategy', component: ChangeDetectionStrategyComponent},
   { path: '**', component: NotFoundComponent},
 ]
 
@@ -21,7 +24,10 @@ let routes: Routes = [
     AppComponent,
     GeneralTableComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
+    ChangeDetectionStrategyComponent,
+    ChildAppComponent
   ],
   imports: [
     BrowserModule,

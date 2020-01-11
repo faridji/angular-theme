@@ -1,0 +1,11 @@
+<div fxLayoutGap="20px">
+    <mat-form-field>
+        <input matInput 
+            #newFood 
+            type="text" 
+            placeholder="Enter a new food" 
+            (keyup.enter)="addFood(newFood.value)">
+    </mat-form-field> 
+    <button mat-raised-button color="primary" (click)="addFood(newFood.value)">Add food</button>
+</div>
+<child-app [data]="foods"></child-app>
