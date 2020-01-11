@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Food } from 'src/app/models/models';
 
 
 @Component({
@@ -9,11 +11,20 @@ import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } 
 })
 export class ChildAppComponent implements OnInit {
 
-  @Input() data: string[];
-  
+  @Input() data: Observable<any>;
+  foods: Food[] = [];
   constructor(private _cdr: ChangeDetectorRef) { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
+    this.data.subscribe( foods => {
+
+      for (let food of foods)
+      {
+        this.foods.push(food);
+        this._cdr.markForCheck();
+      }
+    })
   }
 
   onRefresh()
